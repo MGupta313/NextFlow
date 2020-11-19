@@ -17,13 +17,13 @@ Process looks like a function but is kind of a short script that can be run with
 
 Processes look like this:
 
-`process sayHello {`
-``
-`   """`
-`    echo 'Hello world!' > file`
-`    """`
-``
-`}`
+> process sayHello {
+>
+>   """
+>    echo 'Hello world!' > file
+>    """
+>
+>}
 
 `process <name_of_process>`
 `{body of the process`
