@@ -21,15 +21,18 @@ Processes look like this:
 >
 >   """
 >    echo 'Hello world!' > file
->    """
+>
+>   """
 >
 >}
 
-`process <name_of_process>`
-`{body of the process`
-` this contains: commands, input file, output file`
-` `
-`}`
+>process <name_of_process>
+>
+>{body of the process
+>
+> this contains: commands, input file, output file
+>
+>}
 
 
 1. Processes work in parallel. They don't follow any order.
