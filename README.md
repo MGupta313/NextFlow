@@ -97,3 +97,33 @@ Script block contains the command to be executed.
 
 Nextflow is a programming model in which processes communicate through channels.
 
+#### Channel types 
+Nextflow distinguish two different kinds of channels: queue channels and value channels.
+
+- Queue channel 
+	- A queue channel is a non-blocking unidirectional FIFO queue which connects two processes or operators. 
+	- The same queue channel cannot be used more than one time as process output and more then one time as process input.
+
+- Value Channel
+	- A value channel a.k.a. singleton channel by definition is bound to a single value and it can be read unlimited times without consuming its content.
+	- For this reason a value channel can be used as input by more than one process.
+
+Channels may be created implicitly by the process output(s) declaration or explicitly using the following channel factory methods.
+
+The available factory methods are:
+
+- create
+
+- empty
+
+- from
+
+- fromPath
+
+- fromFilePairs
+
+- fromSRA
+
+- value
+
+- watchPath
