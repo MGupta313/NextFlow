@@ -1,0 +1,44 @@
+Dec-03 17:49:57.642 [main] DEBUG nextflow.cli.Launcher - $> nextflow run hello_world.nf.groovy
+Dec-03 17:49:57.742 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
+Dec-03 17:49:57.755 [main] INFO  nextflow.cli.CmdRun - Launching `hello_world.nf.groovy` [hopeful_bhabha] - revision: 7a5e42d121
+Dec-03 17:49:57.869 [main] DEBUG nextflow.Session - Session uuid: 4c96d4b9-4ea2-4dec-99ea-3c460ca7eeed
+Dec-03 17:49:57.869 [main] DEBUG nextflow.Session - Run name: hopeful_bhabha
+Dec-03 17:49:57.871 [main] DEBUG nextflow.Session - Executor pool size: 8
+Dec-03 17:50:02.918 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.07.1 build 5412
+  Created: 24-07-2020 15:18 UTC (11:18 EDT)
+  System: Mac OS X 10.15.6
+  Runtime: Groovy 2.5.11 on Java HotSpot(TM) 64-Bit Server VM 13.0.2+8
+  Encoding: UTF-8 (UTF-8)
+  Process: 86422@Dhruvibens-MacBook-Pro.local [192.168.0.15]
+  CPUs: 8 - Mem: 16 GB (113.1 MB) - Swap: 5 GB (1.5 GB)
+Dec-03 17:50:02.945 [main] DEBUG nextflow.Session - Work-dir: /Users/mansi/Documents/GitHub/NextFlow/work [Mac OS X]
+Dec-03 17:50:02.945 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/mansi/Documents/GitHub/NextFlow/bin
+Dec-03 17:50:03.006 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec-03 17:50:03.009 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-03 17:50:03.176 [main] DEBUG nextflow.Session - Session start invoked
+Dec-03 17:50:03.594 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-03 17:50:03.603 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: printHello
+Dec-03 17:50:03.676 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 17:50:03.676 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 17:50:03.681 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-03 17:50:03.686 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Dec-03 17:50:03.849 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-03 17:50:03.849 [main] DEBUG nextflow.Session - Session await
+Dec-03 17:50:03.982 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 17:50:03.989 [Task submitter] INFO  nextflow.Session - [5f/885b68] Submitted process > printHello (1)
+Dec-03 17:50:03.998 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 17:50:04.008 [Task submitter] INFO  nextflow.Session - [3d/fcf4eb] Submitted process > printHello (4)
+Dec-03 17:50:04.052 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: printHello (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/mansi/Documents/GitHub/NextFlow/work/5f/885b68dd7515d03376202cfa4d83aa]
+Dec-03 17:50:04.058 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 17:50:04.059 [Task submitter] INFO  nextflow.Session - [f4/ce868d] Submitted process > printHello (3)
+Dec-03 17:50:04.063 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: printHello (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/mansi/Documents/GitHub/NextFlow/work/3d/fcf4ebfd86b5dc4d771c9c0b4f84a1]
+Dec-03 17:50:04.066 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 17:50:04.067 [Task submitter] INFO  nextflow.Session - [fc/95b77d] Submitted process > printHello (2)
+Dec-03 17:50:04.095 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: printHello (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/mansi/Documents/GitHub/NextFlow/work/f4/ce868d0cb53ad453ea1394d15e2127]
+Dec-03 17:50:04.100 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: printHello (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/mansi/Documents/GitHub/NextFlow/work/fc/95b77d7678d07cf0a4a2e6b60f5236]
+Dec-03 17:50:04.104 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec-03 17:50:04.204 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-03 17:50:04.211 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=4; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=15ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Dec-03 17:50:04.269 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Dec-03 17:50:04.288 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
