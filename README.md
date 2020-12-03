@@ -9,48 +9,49 @@ Nextflow is a bioinformatics workflow manager that enables the development of po
 ### Process
 
 Process looks like a function but is kind of a short script that can be run without specifically calling for it like it's in the case of a function.
-
+```
 Processes look like this:
 
->process <name_of_process>
->
->{body of the process
->
-> this contains: commands, input file, output file
->
->}
+process <name_of_process>
 
+{body of the process
+
+ this contains: commands, input file, output file
+
+}
+```
 ###### Example:
+```
+ process sayHello {
 
-> process sayHello {
->
->   """
->    echo 'Hello world!' > file
->
->   """
->
->}
+   """
+    echo 'Hello world!' > file
 
+   """
+
+}
+```
 
 A process may contain five definition blocks, respectively: _directives, inputs, outputs, when clause and finally the process script_. The syntax is defined as follows:
+```
+process < name > {
 
->process < name > {
->
->   [ directives ]
->
->   input:
->    < process inputs >
->
->   output:
->    < process outputs >
->
->   when:
->    < condition >
->
->   [script|shell|exec]:
->   < user script to be executed >
->
->}
+   [ directives ]
+
+   input:
+    < process inputs >
+
+   output:
+    < process outputs >
+
+   when:
+    < condition >
+
+   [script|shell|exec]:
+   < user script to be executed >
+
+}
+```
 
 **NOTES:** 
 1. Processes work in parallel. They don't follow any order.
@@ -67,31 +68,31 @@ Script block contains the command to be executed.
 4. The strings are executed as a Bash script.
 
 **To use a script other than Bash**
+```
+process perlStuff {
 
->process perlStuff {
->
->    """
->    #!/usr/bin/env perl
->
->    print 'Hi there!' . '\n';
->    """
->
->}
->
->
->
->process pyStuff {
->
->    """
->    #!/usr/bin/env python
->
->    x = 'Hello'
->    y = 'world!'
->    print "%s - %s" % (x,y)
->    """
->
->}
+    """
+    #!/usr/bin/env perl
 
+    print 'Hi there!' . '\n';
+    """
+
+}
+
+
+
+process pyStuff {
+
+    """
+    #!/usr/bin/env python
+
+    x = 'Hello'
+    y = 'world!'
+    print "%s - %s" % (x,y)
+    """
+
+}
+```
 
 ### Channels
 
