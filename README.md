@@ -127,3 +127,80 @@ The available factory methods are:
 - value
 
 - watchPath
+
+### Input block
+
+<input qualifier> <input name> [from <source channel>] [attributes]
+
+**_input qualifiers_** declares the type of data to be received.
+
+The qualifiers available are the ones listed below:
+- val (any type of value)
+- env
+- file
+- path
+- stdin
+- tuple (a group of input values)
+- each (execute process for each entry in input collection)
+
+### Output block
+
+<output qualifier> <output name> [into <target channel>, [channel, ...]] [attributes [, ...]]
+
+The qualifiers available are the ones listed below:
+- val (any type of value)
+- env
+- file
+- path
+- stdout
+- tuple (multiple values over the same channel)
+
+##### Example:
+```
+#!/usr/bin/env nextflow
+ 
+params.in = "$baseDir/data/sample.fa"
+ 
+/*
+ * split a fasta file in multiple files
+ */
+process splitSequences {
+ 
+    input:
+    path 'input.fa' from params.in
+ 
+    output:
+    path 'seq_*' into records
+ 
+    """
+    awk '/^>/{f="seq_"++d} {print > f}' < input.fa
+    """
+}
+ 
+/*
+ * Simple reverse the sequences
+ */
+process reverse {
+ 
+    input:
+    path x from records
+     
+    output:
+    stdout into result
+ 
+    """
+    cat $x | rev
+    """
+}
+ 
+/*
+ * print the channel content
+ */
+result.subscribe { println it }
+```
+
+##### Note:
+
+1. Input from user - `params.<name of parameter>`. Initialized with some value. It can be overridden by adding --in option to script command script.
+2. Channel can be created using params.<name>
+3. Channel can be input from user or fixed/hardcoded. Like params.range = 100 or methods = ['dna', 'rna', 'prot']
