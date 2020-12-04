@@ -131,7 +131,7 @@ The available factory methods are:
 
 ### Input block
 
-<input qualifier> <input name> [from <source channel>] [attributes]
+`<input qualifier> <input name> [from <source channel>] [attributes]`
 
 **_input qualifiers_** declares the type of data to be received.
 
@@ -146,7 +146,7 @@ The qualifiers available are the ones listed below:
 
 ### Output block
 
-<output qualifier> <output name> [into <target channel>, [channel, ...]] [attributes [, ...]]
+`<output qualifier> <output name> [into <target channel>, [channel, ...]] [attributes [, ...]]`
 
 The qualifiers available are the ones listed below:
 - val (any type of value)
