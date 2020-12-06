@@ -4,7 +4,7 @@ Getting Started with NextFlow
 
 Nextflow is a bioinformatics workflow manager that enables the development of portable and reproducible workflows.
 
-[Cheat sheet]<https://gist.github.com/MGupta313/0f1c28d27af6b2ed239d95cde0a40c51>
+[Cheat sheet](https://gist.github.com/MGupta313/0f1c28d27af6b2ed239d95cde0a40c51)
 
 ## Terminology and Notes:
 
