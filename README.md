@@ -6,6 +6,8 @@ Nextflow is a bioinformatics workflow manager that enables the development of po
 
 [Cheat sheet](https://gist.github.com/MGupta313/0f1c28d27af6b2ed239d95cde0a40c51)
 
+[Some simple yet good examples for NextFlow](https://github.com/marcpaterno/nextflow-examples)
+
 ## Terminology and Notes:
 
 ### Process
